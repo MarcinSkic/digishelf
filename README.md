@@ -1,26 +1,28 @@
-# Engineer Project: Web
+![App banner](./assets/banner.png)
+![Vercel](https://vercelbadge.vercel.app/api/marcinskic/digishelf)
+![License](https://img.shields.io/static/v1?label=license&message=CC%20BY-NC-ND%204.0&color=yellow)
+![Release](https://img.shields.io/github/release/marcinskic/digishelf.svg)
 
-**Subject**: Application for collecting information about popculture
+Application created as practical part of engineering thesis on subject: "Application for collecting information about popculture". Its a web app where user can keep track on his collection of books, movies and games.
 
-## How to launch?
+## Features
 
--   In client and server copy `.env.example`, rename it to `.env` and fill it with missing data
+-   Adding works from API
+-   Creating works by user
+-   Updating user status on work
+-   Generating reports about user collection
 
-### With Docker
+## Showcase
 
--   Run `docker compose up`
+![Home page](./assets/showcase/home.png)
 
-### or without
+</br>
 
-#### Server
+![Details page](./assets/showcase/details.png)
 
--   Run `npm i`
--   Run `npm run dev`
+</br>
 
-#### Client
-
--   Run `npm i`
--   Run `npm run dev`
+![Reports page](./assets/showcase/reports.png)
 
 ## Copyright
 
@@ -35,16 +37,9 @@ Digishelf app by [Marcin Skic, Marcin Skrzypek, Ewa Solarska](https://github.com
 
 ### Used technologies
 
-[<img align="left" alt="TypeScript" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" style="padding-right:10px;"/>][ts]
-[<img align="left" alt="SCSS" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" style="padding-right:10px;"/>][scss]
-[<img align="left" alt="Jest" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" style="padding-right:10px;"/>][jest]
-[<img align="left" alt="NextJS" width="26px" src="https://raw.githubusercontent.com/MarcinSkic/marcinskic/main/icons/next-official-dark.svg" style="padding-right:10px;"/>][next]
-[<picture align="left" style="padding-right:10px;"> <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/33003089/227041204-71a593b5-395e-4de9-82ff-21f6113c2c8a.svg"><img align="left" alt="Express" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" style="padding-right:10px;" width="26px"></picture>][express]
-[<img align="left" alt="MongoDB" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" style="padding-right:10px;"/>][mongodb]
-
-[ts]: https://www.typescriptlang.org
-[express]: https://expressjs.com
-[next]: https://nextjs.org
-[scss]: https://sass-lang.com
-[jest]: https://jestjs.io
-[mongodb]: htpps://mongodb.com
+[<img align="left" width="26" height="26" alt="Next.js" src="https://api.iconify.design/logos:nextjs-icon.svg" style="padding: 0 20px 16px 0">](https://nextjs.org)
+[<img align="left" width="26" height="26" alt="Sass" src="https://api.iconify.design/devicon:sass.svg" style="padding: 0 20px 16px 0">](https://sass-lang.com)
+[<picture align="left" ><source media="(prefers-color-scheme: light)" srcset="https://api.iconify.design/simple-icons:express.svg?color=%23000000" /><img align="left" width="26" height="26" alt="Express.js" src="https://api.iconify.design/simple-icons:express.svg?color=%23ffffff" style="padding: 0 20px 16px 0"/></picture>](https://expressjs.com)
+[<img align="left" width="26" height="26" alt="Typescript" src="https://api.iconify.design/devicon:typescript.svg" style="padding: 0 20px 16px 0">](https://www.typescriptlang.org)
+[<img align="left" width="26" height="26" alt="Jest" src="https://api.iconify.design/logos:jest.svg" style="padding: 0 20px 16px 0">](https://jestjs.io)
+[<img align="left" width="26" height="26" alt="MongoDB" src="https://api.iconify.design/devicon:mongodb.svg" style="padding: 0 20px 16px 0">](https://mongodb.com)
