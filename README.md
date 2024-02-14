@@ -22,6 +22,15 @@
 -   Run `npm i`
 -   Run `npm run dev`
 
+## Copyright
+
+Digishelf app by [Marcin Skic, Marcin Skrzypek, Ewa Solarska](https://github.com/pollubMsMsEs) is licensed under
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-NC-ND 4.0
+<img height="16px" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+<img height="16px" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+<img height="16px" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1">
+<img height="16px" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a>
+
 ---
 
 ### Used technologies
