@@ -5,22 +5,26 @@ import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 async function tryToReconnect() {
-    try {
-        await fetch("/api/validate", {
-            signal: AbortSignal.timeout(40000),
-            headers: {
-                "Content-Type": "text/plain",
-            },
-        });
-        return true;
-    } catch (e: any) {
-        if (e.name === "TimeoutError") {
-            console.log("Timeout");
-            return false;
-        } else {
-            return false;
+    let attempts = 0;
+    while (attempts < 5) {
+        try {
+            await fetch("/api/validate", {
+                signal: AbortSignal.timeout(8000),
+                headers: {
+                    "Content-Type": "text/plain",
+                },
+            });
+            return true;
+        } catch (e: any) {
+            if (e.name === "AbortError" || e.name === "TimeoutError") {
+                attempts++;
+            } else {
+                return false;
+            }
         }
     }
+
+    return false;
 }
 
 export default function ServerlessLoading() {
