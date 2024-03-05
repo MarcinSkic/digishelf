@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 async function tryToReconnect() {
     try {
         await fetch("/api/validate", {
-            signal: AbortSignal.timeout(10000),
+            signal: AbortSignal.timeout(40000),
             headers: {
                 "Content-Type": "text/plain",
             },
