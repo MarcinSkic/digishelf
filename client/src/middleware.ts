@@ -12,14 +12,24 @@ export async function middleware(request: NextRequest) {
             !!jwtCookie &&
             (
                 await fetch(`${process.env.API_ADDRESS}/validate`, {
+                    signal: AbortSignal.timeout(2000),
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${jwtCookie?.value}`,
                     },
                 })
             ).status === 200;
-    } catch (e) {
-        return NextResponse.next();
+    } catch (e: any) {
+        if (e.name === "TimeoutError") {
+            return NextResponse.redirect(
+                new URL(
+                    `/loading?path=${request.nextUrl.pathname}`,
+                    request.url
+                )
+            );
+        } else {
+            return NextResponse.next();
+        }
     }
 
     if (!isJWTValid && !isOnAuthPage) {
@@ -35,5 +45,7 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/((?!api|error|_next/static|_next/image|favicon.ico).*)"],
+    matcher: [
+        "/((?!loading|api|error|_next/static|_next/image|favicon.ico).*)",
+    ],
 };
